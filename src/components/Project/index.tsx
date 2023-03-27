@@ -18,6 +18,8 @@ interface ReposType {
   description: string;
   git_url: string;
   homepage: string;
+  html_url: string;
+  has_pages: boolean;
 }
 
 export const Project = (): JSX.Element => {
@@ -63,6 +65,7 @@ export const Project = (): JSX.Element => {
                   {repository.language}
                 </Text>
               </ProjectStackTech>
+              {repository.has_pages ? <ProjectLink target="_blank" href={`https://davi894.github.io/${repository.name}/`} >Page: {repository.name}</ProjectLink> : null}
             </ProjectStack>
           )}
 
@@ -70,7 +73,7 @@ export const Project = (): JSX.Element => {
             {repository.description}
           </Text>
           <ProjectLinks>
-            <ProjectLink target="_blank" href={repository.git_url}>
+            <ProjectLink target="_blank" href={repository.html_url}>
               <FaGithub /> Github Code
             </ProjectLink>
             {repository.homepage && (
@@ -80,7 +83,8 @@ export const Project = (): JSX.Element => {
             )}
           </ProjectLinks>
         </ProjectWrapper>
-      ))}
+      ))
+      }
     </>
   );
 };

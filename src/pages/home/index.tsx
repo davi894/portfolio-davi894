@@ -35,9 +35,10 @@ export const Home = (): JSX.Element => {
               Criando experiências por meio da tecnologia{" "}
             </Text>
             <Text type="body1" color="grey6">
-              Sou estudante de programação na Kenzie Academy Brasil, participei
-              de diversos projetos resolvendo problemas de alto nível e
-              desenvolvendo habilidades
+              A minha história no mundo da programação começou por volta dos meus 17 anos, que foi quando cheguei a conhecer o HTML, 
+              JS e CSS pelos vídeos do YouTube, depois cheguei a ver outras linguagens, mas só comecei a programar de fato nos meus 
+              18 para 19 anos, porém desde os meus 17 anos achei as linguagens de programação bem interessante pelo que elas podem 
+              fazer e oferecer. Agora sou desenvolvedor web em desenvolvimento e quero continuar nesse mundo da tecnologia.
             </Text>
             <HeaderButtonsArea>
               <Button as="a" href="#projetos">
@@ -53,7 +54,7 @@ export const Home = (): JSX.Element => {
       <StackSection id="tecnologias">
         <Container>
           <Text as="h4" type="heading3" color="grey1">
-            Ferramentas que domino
+            Ferramentas
           </Text>
           <StackCards>
             {stackData.map((stack, index) => (
